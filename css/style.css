@@ -944,9 +944,11 @@ padding-bottom: 3rem;
     }
     .project_name {
         padding: 15px 10px;
-        height: 80px;
         background: #fff;
         border-radius: 0px 0px 8px 8px;
+        border-left: solid 1px var(--main-color);
+        border-right: solid 1px var(--main-color);
+        border-bottom: solid 1px var(--main-color);
     }
 
 
