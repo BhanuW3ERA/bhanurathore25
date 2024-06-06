@@ -230,7 +230,7 @@ span.circle_edit {
 
 .main_headings_page h2 {
     font-weight: 700;
-    font-size: 60px;
+    font-size: 50px;
     line-height: 63px;
     position: relative;
     width: 86%;
@@ -270,7 +270,7 @@ span.circle_edit {
 }
 .say_hlw_box h3 {
     font-weight: 700;
-    font-size: 29px;
+    font-size: 24px;
     color: #fff;
 }
 .say_hlw_box {
@@ -465,7 +465,7 @@ div#aboutTabContent table tr th {
 }
 
 .skill_singl_inner h2 {
-    font-size: 30px;
+    font-size: 23px;
     font-weight: 700;
     margin: 0;
 }
@@ -682,7 +682,7 @@ padding-bottom: 3rem;
 
 .footer_sign h1 {
     font-weight: 900;
-    font-size: 112px;
+    font-size: 86px;
     text-align: center;
     color: var(--bottom-text);
 }
@@ -711,6 +711,10 @@ padding-bottom: 3rem;
 .footer_box h4{
     transition: 0.3s;
     margin: 0;
+}
+.footer_box a{
+    text-decoration: none;
+    color: #fff;
 }
 .footer_box:hover.footer_box h4 , .footer_box:hover.footer_box i {
     color: var(--main-color);
@@ -817,7 +821,7 @@ padding-bottom: 3rem;
 @media screen and (max-width:767px) {
     
     .main_hero_head h1 {
-        font-size: 60px;
+        font-size: 44px;
         line-height: 60px;
     }
     .img_about img {
