@@ -96,10 +96,10 @@
                         <div class="d-md-flex client_how mt-5 text-center text-md-start">
                             <h2><b>1.2k</b> world wide clients</h2>
                             <div class="d-flex align-items-center ms-4 justify-content-center justify-content-md-start">
-                                <i class="fa-brands fa-behance  fs-4"></i>
-                                <i class="fa-brands fa-linkedin-in ms-3 fs-4"></i>
-                                <i class="fa-solid fa-basketball ms-3 fs-4"></i>
-                                <i class="fa-brands fa-github ms-3 fs-4"></i>
+                                <a href="#0" target="_blank"><i class="fa-brands fa-behance  fs-4"></i></a>
+                                <a href="#0" target="_blank"><i class="fa-brands fa-linkedin-in ms-3 fs-4"></i></a>
+                                <a href="#0" target="_blank"><i class="fa-brands fa-instagram ms-3 fs-4"></i></a>
+                                <a href="https://github.com/bhanu0rathore" target="_blank"><i class="fa-brands fa-github ms-3 fs-4"></i></a>
                             </div>
                         </div>
 
@@ -139,7 +139,7 @@
 
 
         <div class="row py-5" >
-            <div class="col-12 col-md-8">
+            <div class="col-12 mb-md-5 col-xl-8 col-lg-7">
                 <div class="skills_main d-flex flex-wrap" >
                     <div class="skill_box me-md-4 mb-md-4">
                         <img src="./images/web-design.png" alt="designing" id="grapDesignImg">
@@ -180,7 +180,7 @@
 
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12  col-xl-4 col-lg-5">
                 <div class="say_hlw_box" >
                     <i class="fa-solid fa-up-right-from-square"></i>
                     <p>SAY HELLO!</p>
@@ -402,7 +402,7 @@
                             <div class="skil_single_box mb-4 d-flex align-items-center">
                                 <i class="fa-solid fa-compass-drafting"></i>
                                 <div class="skill_singl_inner">
-                                    <h2>HTML,CSS,JavaScript & jQuery</h2>
+                                    <h2>HTML , CSS , JavaScript & jQuery</h2>
                                     <p>(95%)</p>
                                 </div>
                             </div>
@@ -733,7 +733,7 @@
 
         <div class="row align-items-center">
             <div class="col-12 col-xl-9 col-md-6 col-lg-7">
-                <div class="main_headings_page w-75">
+                <div class="main_headings_page ">
                     <p>Pricing</p>
                     <h2>Stay chill and pick your plan</h2>
                 </div>
@@ -808,7 +808,7 @@
 <footer id="footerSec">
     <div class="container">
         <div class="row"  >
-            <div class="col-12 col-md-4"> 
+            <div class="col-12 col-xl-4 col-lg-3 col-md-12"> 
                 <div class="footer_head"> 
                     <h2>Let's work togather</h2>
 
@@ -816,10 +816,10 @@
                         <p>Based in India </p>
                             <p>|</p>
                             <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-5 mb-md-0">
-                               <a href="#0"> <i class="fa-brands fa-behance  fs-4"></i></a>
-                               <a href="#0"> <i class="fa-brands fa-linkedin-in ms-3 fs-4"></i></a>
-                               <a href="#0"><i class="fa-solid fa-basketball ms-3 fs-4"></i></a>
-                                <a href="#0"><i class="fa-brands fa-github ms-3 fs-4"></i></a>
+                               <a href="#0" target="_blank"> <i class="fa-brands fa-behance  fs-4"></i></a>
+                               <a href="#0" target="_blank"> <i class="fa-brands fa-linkedin-in ms-3 fs-4"></i></a>
+                               <a href="#0" target="_blank"><i class="fa-brands fa-instagram ms-3 fs-4"></i></a>
+                                <a href="https://github.com/bhanu0rathore" target="_blank"><i class="fa-brands fa-github ms-3 fs-4"></i></a>
                             </div>                        
                     </div>
             
@@ -827,7 +827,7 @@
             </div>
 
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-xl-4 col-lg-5 col-md-6">
                 <div class="footer_box">
                     <h5>Looking for a hectic designer?</h5>
 
@@ -843,7 +843,7 @@
 
 
 
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-xl-4 col-lg-4 col-md-6">
                 <div class="footer_box">
                     <h5>Want a more in-depth look at my history?</h5>
 
@@ -869,7 +869,7 @@
             <div class="col-12">
                 <div class="footer_base d-md-flex text-center text-md-start justify-content-between ">
                     <p>©2024 Bhanu Rathore, All Rights Reserved</p>
-                    <a href="#mainHeroBanner">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+                    <a href="#0" id="scrollTopBtn">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
                 </div>
             </div>
 
@@ -958,6 +958,18 @@
   
 <script>
     $(document).ready(function () {
+
+
+        $('#scrollTopBtn').on('click', function(){
+            $('html, body').animate({scrollTop : 0},800);
+        });
+
+        $('a[href="#0"]').on('click', function(event){
+            event.preventDefault();
+        });
+
+
+
 
     $('#red').on('click', function() {
         
