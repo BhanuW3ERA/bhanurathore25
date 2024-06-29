@@ -10,6 +10,93 @@ document.addEventListener("DOMContentLoaded", function() {
 
   $(document).ready(function () {
 
+    $('#firstName, #lastName').on('keypress', function(event) {
+      var input = $(this);
+      var keyCode = event.which;
+      var isNumber = (keyCode >= 48 && keyCode <= 57);
+
+      if (isNumber) {
+          event.preventDefault();
+          $('#messageShowing').text('Please enter only letters in the name fields.');
+      } else {
+          $('#messageShowing').text('');
+      }
+  });
+
+  $('#numberForm').on('input', function() {
+      var input = $(this);
+      var isNumber = /^[0-9]+$/.test(input.val());
+      var isValidLength = input.val().length >= 10 && input.val().length <= 15;
+      var isDemoNumber = /1234567890/.test(input.val());
+
+      if (!isNumber || !isValidLength || isDemoNumber) {
+          $('#messageShowing').text('Please enter a valid mobile number.');
+      } else {
+          $('#messageShowing').text('');
+      }
+  });
+
+  $('#emailForm').on('input', function() {
+      var input = $(this);
+      var isValidEmail = /^[\w-.]+@gmail\.com$/.test(input.val());
+
+      if (!isValidEmail) {
+          $('#messageShowing').text('Please enter a valid email ending with @gmail.com.');
+      } else {
+          $('#messageShowing').text('');
+      }
+  });
+
+  $('#contactForm').on('submit', function(event) {
+      var isValid = true;
+      var messageShowing = $('#messageShowing');
+
+      $('#firstName, #lastName').each(function() {
+          var input = $(this);
+          var isName = /^[A-Za-z]+$/.test(input.val());
+
+          if (!isName) {
+              messageShowing.text('Please enter only letters in the name fields.');
+              isValid = false;
+              return false; // Exit each loop early
+          } else {
+              messageShowing.text('');
+          }
+      });
+
+      var numberForm = $('#numberForm');
+      var isNumber = /^[0-9]+$/.test(numberForm.val());
+      var isValidLength = numberForm.val().length >= 10 && numberForm.val().length <= 15;
+      var isDemoNumber = /1234567890/.test(numberForm.val());
+
+      if (!isNumber || !isValidLength || isDemoNumber) {
+          messageShowing.text('Please enter a valid mobile number.');
+          isValid = false;
+      }
+
+      var emailForm = $('#emailForm');
+      var isValidEmail = /^[\w-.]+@gmail\.com$/.test(emailForm.val());
+
+      if (!isValidEmail) {
+          messageShowing.text('Please enter a valid email ending with @gmail.com.');
+          isValid = false;
+      }
+
+      if (!isValid) {
+          event.preventDefault();
+      }
+  });
+
+
+
+
+
+
+
+
+
+    
+
 
 
 
@@ -56,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 var eml = $("#emailForm").val("");
                 var msgText = $("#formMsg").val("");
 
-            }, 3000);
+            }, 2000);
         }
 
 
