@@ -530,12 +530,13 @@ div#aboutTabContent table tr th {
 }
 
 .project_4{
-    background-image: url(../images/proj5.jpg);
+    background-image: url(../images/proj7.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .project_5{
-    background-image: url(../images/proj6.jpg);
+    background-image: url(../images/proj8.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -828,7 +829,7 @@ padding-bottom: 3rem;
     outline: 0;
     height: 150px;
 }
-input#submitFromBtn {
+button#submitFromBtn {
     padding: 8px 29px;
     border: solid 1px var(--main-color);
     border-radius: 40px;
@@ -841,7 +842,7 @@ input#submitFromBtn {
     transition: 0.3s;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
-input#submitFromBtn:hover {
+button#submitFromBtn:hover {
     background: none;
     transition: 0.3s;
     color: var(--main-color);
@@ -894,6 +895,7 @@ input[type=number] {
 .brick_single h6 {
     font-size: 19px;
     margin: 0;
+    font-weight: 100;
     color: #9f9f9f;
 }
 .brick_single i {

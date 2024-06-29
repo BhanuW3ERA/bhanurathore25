@@ -34,6 +34,7 @@
 </head>
 <body style="height: 100vh;">
 
+
     <header >
         <div class="main_header_nav">
             <nav  class="d-flex justify-content-between align-items-center container-fluid py-0 pe-0 pe-md-1 " >
@@ -134,54 +135,48 @@
 
             <div class="col-12 col-md-6">
                 <div class="main-contact h-100">
-                    <form action="send_email.php" class="h-100"  id="contactForm">
-
+                    <form action="https://api.web3forms.com/submit" method="POST" class="h-100" id="contactForm">
+                        <input type="hidden" name="access_key" value="077c0f2f-b40e-41e5-b053-2f6ce1f3b3ec">
                         <div class="input-grps d-md-flex justify-content-between">
                             <div class="single_input_grp">
                                 <label for="firstName">First Name</label>
-                                <input type="text" placeholder="First Name" id="firstName" name="firstName">
+                                <input type="text" placeholder="First Name" id="firstName" name="firstName" required>
                             </div>
-                           
                             <div class="single_input_grp">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" placeholder="Last Name" id="lastName" name="lastName">
-                            </div>                            
+                                <input type="text" placeholder="Last Name" id="lastName" name="lastName" required>
+                            </div>
                         </div>
-
+                
                         <div class="input-grps d-md-flex justify-content-between">
-
                             <div class="single_input_grp">
                                 <label for="numberForm">Mobile Number</label>
-                                <input type="number" placeholder="Enter Mobile Number" id="numberForm" name="numberForm">
+                                <input type="tel" placeholder="Enter Mobile Number" id="numberForm" name="numberForm" required>
                             </div>
-
                             <div class="single_input_grp">
                                 <label for="emailForm">Email</label>
-                                <input type="email" placeholder="Enter Your Email" id="emailForm" name="emailForm">
-                            </div>           
-                            
+                                <input type="email" placeholder="Enter Your Email" id="emailForm" name="emailForm" required>
+                            </div>
                         </div>
-
+                
                         <label for="formMsg">Message</label>
-                        <textarea name="message" id="formMsg" placeholder="Message..."></textarea>
-
-
-                        <input type="button" value="Submit" id="submitFromBtn">
-
+                        <textarea name="message" id="formMsg" placeholder="Message..." required></textarea>
+                
+                        <span id="messageShowing" class="fs-5" style="color: red;"></span>
+                        <button type="submit" id="submitFromBtn">Submit</button>
                     </form>
-
+                
                     <div class="flw_icons">
                         <div class="d-md-flex align-items-center justify-content-center justify-content-md-start">
                             <h2>Follow me:</h2>
-                            <a href="#0" target="_blank"><i class="fa-brands fa-behance  fs-4"></i></a>
+                            <a href="#0" target="_blank"><i class="fa-brands fa-behance fs-4"></i></a>
                             <a href="#0" target="_blank"><i class="fa-brands fa-linkedin-in ms-3 fs-4"></i></a>
                             <a href="#0" target="_blank"><i class="fa-brands fa-instagram ms-3 fs-4"></i></a>
                             <a href="https://github.com/bhanu0rathore" target="_blank"><i class="fa-brands fa-github ms-3 fs-4"></i></a>
                         </div>
                     </div>
-
-
                 </div>
+                
             </div>
             
         </div>

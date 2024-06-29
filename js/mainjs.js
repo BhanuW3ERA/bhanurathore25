@@ -11,6 +11,62 @@ document.addEventListener("DOMContentLoaded", function() {
   $(document).ready(function () {
 
 
+
+
+    setTimeout(function() {
+        $("#messageShowing").text(" ");
+    }, 5000);
+
+    $("#submitFromBtn").click(function(){
+
+
+        
+
+        var firstName = $("#firstName").val();
+        var lastName = $("#lastName").val();
+        var numb = $("#numberForm").val();
+        var eml = $("#emailForm").val();
+        var msgText = $("#formMsg").val();
+
+        if(firstName == ""){
+            $("#messageShowing").text("Enter First Name");
+            $("#messageShowing").css("color","red")
+        }else if(lastName == ""){
+            $("#messageShowing").text("Enter Last Name");
+            $("#messageShowing").css("color","red")
+        }else if(numb == ""){
+            $("#messageShowing").text("Enter Mobile Number");
+            $("#messageShowing").css("color","red")
+        }else if(eml == ""){
+            $("#messageShowing").text("Enter Your Email");
+            $("#messageShowing").css("color","red")
+        }else if(msgText == ""){
+            $("#messageShowing").text("Enter Message");
+            $("#messageShowing").css("color","red")
+        }else{
+            $("#messageShowing").text("Form Submitted sucessfully");
+            $("#messageShowing").css("color","green")
+
+            setTimeout(function() {
+                $("#messageShowing").text(" ");
+
+                var firstName = $("#firstName").val("");
+                var lastName = $("#lastName").val("");
+                var numb = $("#numberForm").val("");
+                var eml = $("#emailForm").val("");
+                var msgText = $("#formMsg").val("");
+
+            }, 3000);
+        }
+
+
+    });
+
+
+
+
+
+
     $('#scrollTopBtn').on('click', function(){
         $('html, body').animate({scrollTop : 0},800);
     });
